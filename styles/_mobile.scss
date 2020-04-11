@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+main {
+    background: $primary-color;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: calc(2rem + 1vw);
+    font-family: $logo-font;
+}
+p {
+    font-family: $general-font;
+    font-size: calc(.0rem + 1vw);
+}
+h3,
+.container {
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.left {
+    grid-column: 1;
+    grid-row: 2/4;
+    color: white;
+    @include flex (column, space-evenly, flex-start); 
+    min-height: 90%;
+}
+
+.right {
+    padding-top: 2rem;
+    grid-column: 2/2;
+    grid-row: 1/4;
+    min-height: 100%;
+    img {
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+.full-logo {
+    padding-top: 5rem;
+    max-width: 80%;
+}
+
+

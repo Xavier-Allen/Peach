@@ -1,0 +1,191 @@
+.landing-container {
+    width: 80%;
+    margin: 0rem auto;
+}
+
+header {
+    @include flex(row, space-between, center);
+    min-height: 10vh;
+    .logo {
+        flex: 2 1 25rem;
+    }
+}
+nav {
+    flex: 1 1 25rem;
+}
+
+.nav-links {
+    @include flex(row, space-evenly, center);
+}
+
+.active {
+    background: $primary-color;
+    color: white;
+    padding: 1rem 3rem;
+}
+
+/* Hero Section */
+.hero {
+    background: $primary-color;
+    height: 90vh;
+}
+.hero-main {
+    @include flex(row, space-between, center);
+    min-height: 70vh;
+
+    .hero-img {
+        flex: 1 1 40rem;
+        max-height: 70vh;
+        overflow: hidden;
+        margin-left: 20rem;
+
+        img {
+            min-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    h1 {
+        flex: 1 1 40rem;
+        color: white;
+    }
+}
+
+.hero-bottom {
+    min-height: 20vh;
+    background: $gradient;
+    
+}
+
+.hero-bottom-container {
+   @include flex(row,center,space-evenly); 
+    max-width: 50%;
+    margin: 0rem auto;
+    padding-top: 7rem;
+    .hero-bottom-text {
+        flex: 1 1 40rem;
+        color: white;
+    }
+    .button-span {
+        flex: 1 1 40rem;
+    }
+    button {
+        padding: 1rem 3rem;
+        background: white;
+        color: $primary-color;
+        border: none;
+    }
+}
+
+/* Info Section */
+.info-main { 
+    @include flex(column, center,center);
+    width: 80%;
+    margin: 0rem auto;
+    min-height: 100vh;
+}
+
+.card {
+    text-align: center;
+}
+.info-cards {
+    padding-top: 7rem;
+    flex: 1 1 40rem;
+    color: $primary-color;
+    @include flex(row, center, space-evenly);
+
+    .connect-card {
+        flex: 1 1 40rem;
+        h2 {
+            padding-top: 3rem;
+        }
+    }
+    .chat-card {
+        flex: 1 1 40rem;
+        h2 {
+            padding-top: 3rem;
+        }
+    }
+    .peach-card {
+        flex: 1 1 40rem;
+        img {
+            width: 84%
+        }
+        h2 {
+            padding-top: 3rem;
+        }
+    }
+}
+
+.info-icons {
+    flex: 1 1 40rem;
+    padding-bottom: 7rem;
+    @include flex(row, space-between, center);
+
+    .left-info-icons {
+        @include flex(column, space-evenly, center)
+    }
+    .right-info-icons {
+        @include flex(column, space-evenly, center)
+    }
+}
+
+.img-container {
+    width: 90%;
+    object-fit: contain;
+    box-shadow: -5px 5px 20px black;
+}
+
+.ready-to-join {
+    background: $primary-color;
+    color: white;
+    min-height: 25vh;
+    text-align: center;
+    
+    h1 {
+        padding: 2rem 0rem;
+    }
+    .ready-to-join-logos {
+        padding-bottom: 2.5rem;
+    }
+}
+
+footer {
+    @include flex(row, space-evenly, center);
+    min-height: 20rem;
+}
+
+.left-footer {
+    flex: 1 1 40rem;
+    @include flex(row, space-evenly,center);
+}
+
+.center-footer {
+    flex: 1 1 40rem;
+    @include flex(row, space-evenly,center);
+}
+
+.right-footer {
+    flex: 1 1 40rem;
+    @include flex(row, space-evenly,center);
+}
+
+
+
+
+/*Media Queries */
+
+@media screen and (min-width: 2000px) {
+    html {
+        h1 {
+            font-size: 5rem;
+        }
+        h2, li, a, button {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.7rem;
+        }
+    }
+}
